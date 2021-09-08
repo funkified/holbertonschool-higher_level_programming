@@ -7,4 +7,5 @@ for i in range(0, 9):
         else:
             if i == 8 and j == 9:
                 print("{:d}{:d}".format(i, j))
+                break
             print("{:d}{:d}, ".format(i, j), end="")
