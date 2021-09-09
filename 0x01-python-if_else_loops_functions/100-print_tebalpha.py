@@ -1,3 +1,5 @@
 #!/usr/bin/python3
-alpha = "aBcDeFgHiJkLmNoPqRsTuVwXyZ"
-print(''.join(reversed(alpha)), end='')
+for i in range(-122, -96):
+    if abs(i) % 2 == 1:
+        i = abs(i) - 32
+    print("{}".format(chr(abs(i))), end="")
