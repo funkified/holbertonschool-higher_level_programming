@@ -2,7 +2,7 @@
 def multiple_returns(sentence):
     size = len(sentence)
     first = sentence[0]
-    if sentence:
-        return [size, first]
+    if size > 0:
+        return (size, first)
     else:
-        return None
+        None
