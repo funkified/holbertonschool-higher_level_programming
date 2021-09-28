@@ -9,18 +9,19 @@ class Square:
     This is a class Square that define a square
 
     Attributes:
-    __size: the int size of square
+        __size: the int size of square
     """
 
     def __init__(self, size=0):
         """
         Method __init__ to initialize class
+
         Parameter:
             size: size of squuare
         """
         if type(size) is not int:
             raise TypeError("size must be an integer")
         elif size < 0:
-            raise ValueError("size must be an integer")
+            raise ValueError("size must be >= 0")
         else:
             self.__size = size
