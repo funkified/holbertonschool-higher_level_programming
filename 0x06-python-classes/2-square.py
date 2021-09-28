@@ -7,7 +7,7 @@ Defines a square by 1-square.py
 class Square:
     """
     This is a class Square that define a square
-    
+
     Attributes:
     __size: the int size of square
     """
