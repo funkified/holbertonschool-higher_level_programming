@@ -29,7 +29,7 @@ class Square:
         """Public Method to print a square with #
         """
         if self.__size == 0:
-            print()
+            print("")
         else:
             print("\n" * self.__position[1], end="")
             for i in range(self.__size):
@@ -55,9 +55,10 @@ class Square:
         """
         if type(value) is not int:
             raise TypeError("size must be an integer")
-        if value < 0:
+        elif value < 0:
             raise ValueError("size must be >= 0")
-        self.__size = value
+        else:
+            self.__size = value
 
     @property
     def position(self):
@@ -67,14 +68,10 @@ class Square:
 
     @position.setter
     def position(self, value):
-        """ setter method
-        """
-        flag = False
-        if type(value) is tuple:
-            if len(value) is 2:
-                if type(value[0]) is int and value[0] >= 0:
-                    if type(value[1]) is int and value[1] >= 0:
-                        flag = True
-                        self.__position = value
-        if flag is False:
+        """ setter method """
+        if type(value) is tuple and len(value) == 2 and\
+           type(value[0]) is int and type(value[1]) is int and\
+           value[0] >= 0 and value[1] >= 0:
+            self.__position = value
+        else:
             raise TypeError("position must be a tuple of 2 positive integers")
