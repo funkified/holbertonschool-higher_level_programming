@@ -5,45 +5,28 @@ Task: 5-square
 
 
 class Square:
-    """
-    Square Class
+    """Define a Square Class
     """
 
     def __init__(self, size=0, position=(0, 0)):
-        """
-        initialize
+        """ initialize and validates given size
+
+        Args:
+            size (int): integer greater or equal to zero
         """
         self.__size = size
         self.__position = position
 
-    @property
-    def size(self):
-        """
-        Property getter
-        """
-        return self.__size
-
-    @size.setter
-    def size(self, value):
-        """
-        Property setter
-        """
-        if type(value) is int:
-            self.__size = value
-        else:
-            raise TypeError("size must be an integer")
-        if value < 0:
-            raise ValueError("size must be >= 0")
-
     def area(self):
-        """
-        Method to calculate area of square
+        """Method to calculate area of square
+
+        Returns:
+            int: area of square
         """
         return self.__size ** 2
 
     def my_print(self):
-        """
-        Public Method to print a square with #
+        """Public Method to print a square with #
         """
         if self.__size == 0:
             print()
@@ -54,20 +37,41 @@ class Square:
                 print("#" * self.__size)
 
     @property
-    def position(self):
+    def size(self):
+        """Property getter
+        Class Instance
+
+        Returns:
+            int: size of square
         """
-        Property
+        return self.__size
+
+    @size.setter
+    def size(self, value):
+        """ Method to set size of square instance
+
+        Arguments:
+        value (int): size
+        """
+        if type(value) is not int:
+            raise TypeError("size must be an integer")
+        if value < 0:
+            raise ValueError("size must be >= 0")
+        self.__size = value
+
+    @property
+    def position(self):
+        """Property
         """
         return self.__position
 
     @position.setter
     def position(self, value):
+        """ setter method
         """
-        setter
-        """
-        if type(value) is tuple:
-            if len(value) is 2:
-                if type(value) is int and value[0] >= 0:
-                    self.__position = value
-        else:
-            raise TypeError("position must be a tuple of 2 positive integers")
+        if type(value) is not tuple:
+            if len(value) is not 2:
+                if type(value[0]) is not int and value[0] < 0:
+                    if type(value[1]) is int and value[1] < 0:
+                        raise TypeError("position must be a tuple \
+                                of 2 positive integers")
