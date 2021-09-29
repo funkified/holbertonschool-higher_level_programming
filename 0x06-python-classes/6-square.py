@@ -37,15 +37,20 @@ class Square:
 
     @property
     def position(self):
+        """
+        Property
+        """
         return self.__position
 
     @position.setter
     def position(self, value):
+        """
+        setter
+        """
         if type(value) is not tuple or \
-                len(value) is not 2 or \
-                type(value) is not int:
-                    raise TypeError("position must be a tuple \
-                            of 2 positive integers")
+                len(value) is not 2 or type(value) is not int:
+                raise TypeError("position must be a tuple of \
+                        2 positive integers")
         else:
             self.__position = value
 
