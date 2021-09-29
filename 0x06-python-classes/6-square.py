@@ -14,8 +14,8 @@ class Square:
         Args:
             size (int): integer greater or equal to zero
         """
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     def area(self):
         """Method to calculate area of square
