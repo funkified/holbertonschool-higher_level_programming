@@ -29,12 +29,16 @@ class Square:
         """Public Method to print a square with #
         """
         if self.__size == 0:
-            print("")
+            print()
         else:
-            print("\n" * self.__position[1], end="")
+            for x in range(self.__position[1]):
+                print()
             for i in range(self.__size):
-                print(" " * self.__position[0], end="")
-                print("#" * self.__size)
+                for j in range(self.__position[0]):
+                    print(" ", end="")
+                for idx in range(self.__size):
+                    print("#", end="")
+                print()
 
     @property
     def size(self):
