@@ -4,4 +4,5 @@ Creates Rectangle Class
 """
 
 class Rectangle:
+    """Empty Class"""
     pass

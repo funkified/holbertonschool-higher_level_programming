@@ -11,6 +11,15 @@ class Rectangle:
         self.width = width
         self.height = height
 
+    def __str__(self):
+        """ Prints a rectangle with # character"""
+        if self.area() == 0:
+            return ""
+        return (('#' * self.__width + '\n') * self.__height)[:-1]
+
+    def __repr__(self):
+        return 'Rectangle({:d}, {:d})'.format(self.__width, self.__height)
+
     @property
     def height(self):
         """method property"""
@@ -18,7 +27,7 @@ class Rectangle:
 
     @height.setter
     def height(self, value):
-        """sets the height value"""
+        """Sets the value of height"""
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value < 0:
@@ -32,7 +41,7 @@ class Rectangle:
 
     @width.setter
     def width(self, value):
-        """sets the value of width"""
+        "Sets the value of width """
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value < 0:
@@ -40,9 +49,11 @@ class Rectangle:
         self.__width = value
 
     def area(self):
-        """ calculates the area of rectangle"""
+        """ Calculates area of rectangle"""
         return self.__height * self.__width
 
     def perimeter(self):
-        """ calculates teh perimeter of a rectangle"""
+        """Calculates perimeter of rectangle"""
+        if self.height == 0 or self.width == 0:
+            return 0
         return 2 * (self.__height + self.__width)
