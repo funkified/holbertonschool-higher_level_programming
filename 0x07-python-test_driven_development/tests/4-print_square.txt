@@ -43,3 +43,27 @@ Traceback (most recent call last):
 ..File "<stdin>", line 1, in <module>
 TypeError: print_square() takes 1 positional argument but 2 were given
 >>>
+======================
+Case 6: NO ARGS
+=======================
+>>> print_square()
+Traceback (most recent call last):
+	...
+TypeError: print_square() missing 1 required positional argument: 'size'
+
+====================
+CASE ODD NUMBERS
+====================
+>>> print_square(3)
+###
+###
+###
+>>>
+=====================
+CASE: FLOATS
+=====================
+>>> print_square(2.2)
+Traceback (most recent call last):
+	...
+TypeError: size must be an integer
+
