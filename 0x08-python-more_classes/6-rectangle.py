@@ -1,3 +1,9 @@
+#!/usr/bin/python3
+"""
+Class Rectangle
+"""
+
+
 class Rectangle:
     """ Empty Rectangle"""
     number_of_instances = 0
