@@ -66,7 +66,7 @@ class Rectangle:
 
     def __del__(self):
         """ deletes class"""
-        print("Bye rectangele...")
+        print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
 
     @staticmethod
@@ -78,6 +78,7 @@ class Rectangle:
             raise TypeError("rect_2 must be an instance of Rectangle")
         if rect_1.area() >= rect_2.area():
             return rect_1
+        return rect_2
 
     @classmethod
     def square(cls, size=0):
