@@ -22,3 +22,29 @@ CASE 1:
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 TypeError: text_indentation() takes 1 positional argument but 2 were given
+
+===========
+Case 2:
+===========
+>>> text_indentation("Sergio.Vera")
+Sergio.
+<BLANKLINE>
+<BLANKLINE>
+Vera
+>>>
+
+============
+CASE 3:
+============
+>>> text_indentation("Sergio.Vera?how are you: John")
+Sergio.
+<BLANKLINE>
+<BLANKLINE>
+Vera?
+<BLANKLINE>
+<BLANKLINE>
+how are you:
+<BLANKLINE>
+<BLANKLINE>
+ John
+>>>
