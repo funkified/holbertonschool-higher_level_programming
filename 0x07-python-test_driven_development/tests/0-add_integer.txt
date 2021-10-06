@@ -18,6 +18,9 @@ PASS TEST CASE:
 >>> add_integer(100.3, -2)
 98
 
+>>> print(add_integer(1.2, 1.2))
+2
+
 =================
 FAILED CASES:
 =================
