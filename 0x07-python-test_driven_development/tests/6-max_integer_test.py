@@ -35,3 +35,5 @@ class TestMaxInteger(unittest.TestCase):
         self.assertAlmostEqual(max_integer([100]), 100)
     def test_start(self):
         self.assertAlmostEqual(max_integer([7, 2, 3, 4, 5]), 7)
+    def test_middle(self):
+        self.assertAlmostEqual(max_integer([1, 2, 5, 2]), 5)
