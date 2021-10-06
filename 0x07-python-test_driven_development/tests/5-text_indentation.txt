@@ -31,20 +31,19 @@ Sergio.
 <BLANKLINE>
 <BLANKLINE>
 Vera
->>>
 
-============
+===========
 CASE 3:
 ============
->>> text_indentation("Sergio.Vera?how are you: John")
+>>> text_indentation("Sergio. Vera?how are you:John")
 Sergio.
 <BLANKLINE>
 <BLANKLINE>
-Vera?
+ Vera?
 <BLANKLINE>
 <BLANKLINE>
 how are you:
 <BLANKLINE>
 <BLANKLINE>
- John
->>>
+John
+
