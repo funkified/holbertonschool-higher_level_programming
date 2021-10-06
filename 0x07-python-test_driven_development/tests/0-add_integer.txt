@@ -50,6 +50,11 @@ Traceback (most recent call last):
 ...raise TypeError("b must be an integer")
 TypeError: b must be an integer
 
+>>> add_integer(float('nan'), 2)
+Traceback (most recent call last):
+	...
+ValueError: cannot convert float NaN to integer
+
 
 >>> ...
 Ellipsis
