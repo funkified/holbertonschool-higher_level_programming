@@ -33,3 +33,5 @@ class TestMaxInteger(unittest.TestCase):
     def test_one_int(self):
         """ test for just one postive number"""
         self.assertAlmostEqual(max_integer([100]), 100)
+    def test_start(self):
+        self.assertAlmostEqual(max_integer([7, 2, 3, 4, 5]), 7)
