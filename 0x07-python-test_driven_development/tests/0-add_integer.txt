@@ -3,12 +3,12 @@
 ===============
 PASS TEST CASE:
 ================
->>> add_integer(1, 2)
-3
+>>> add_integer(2, 2)
+4
 
 
->>> add_integer(100, -2)
-98
+>>> add_integer(98, -2)
+96
 
 
 >>> add_integer(2)
@@ -20,7 +20,7 @@ PASS TEST CASE:
 
 =================
 FAILED CASES:
-==================
+=================
 >>> add_integer(4, "School")
 Traceback (most recent call last):
 	...
