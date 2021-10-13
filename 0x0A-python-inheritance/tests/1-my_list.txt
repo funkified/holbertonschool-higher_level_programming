@@ -1,9 +1,33 @@
+''1-my_list'' module
+
+
+==============================
+Importing function
+===================================
 >>> MyList = __import__('1-my_list').MyList
 
+======================================
+Checking for doctring
+======================================
+>>> mod = __import__("1-my_list").MyList.print_sorted.__doc__
+>>> len(mod) > 1
+True
 
-=======================
+======================================
+Testing for negative numbers
+======================================
+>>> l.append(-1)
+>>> l.append(5)
+>>> print(l)
+[4, 3, 2, 1, -1, 5]
+>>> l.print_sorted()
+[-1, 1, 2, 3, 4, 5]
+>>> print(l)
+[4, 3, 2, 1, -1, 5]
+>>>
+=======================================
 Creating list
-=======================
+=======================================
 >>> my_list = MyList()
 >>> my_list.append(2)
 >>> my_list.append(5)
@@ -13,7 +37,7 @@ Creating list
 [2, 5, 2, 3]
 >>> my_list.print_sorted()
 [2, 2, 3, 5]
-
+>>>
 ==========================
 Testing ofr string
 ==========================
@@ -25,4 +49,3 @@ TypeError: unorderable types: str() < int()
 >>> print(my_list)
 [2, 5, 2, 3, 'four']
 >>>
-
