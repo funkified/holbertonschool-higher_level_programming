@@ -8,7 +8,10 @@ Using BaseGeometry
 >>> bg.integer_validator("my_int", 12)
 >>> bg.integer_validator("width", 89)
 >>>
-
+>>> bg.integer_validator("name", "John")
+Traceback (most recent call last):
+...
+TypeError: name must be an integer
 ========================
 Cheking for lenght
 ========================
@@ -25,7 +28,7 @@ Calling area()
 ===========================
 >>> b = bg()
 Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
+	...
 TypeError: 'BaseGeometry' object is not callable
 >>> b = BaseGeometry()
 >>> b.area()
@@ -37,6 +40,9 @@ Traceback (most recent call last):
 	...
 TypeError: area() takes 1 positional argument but 2 were given
 >>>
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("distance", 30)
+
 
 ===========================
 Checking for strings
@@ -54,6 +60,11 @@ ValueError: int must be greater than 0
 Traceback (most recent call last):
 	...
 TypeError: bool must be integer
+
+===========================================
+Floats
+==========================================
+
 >>> b.integer_validator("float", 2.5)
 Traceback (most recent call last):
 	...
@@ -91,3 +102,10 @@ Traceback (most recent call last):
 	...
 TypeError: integer_validator() takes 3 positional arguments but 4 were given
 
+================================================
+One argument
+================================================
+>>> bg.integer_validator("my_int")
+Traceback (most recent call last):
+	...
+TypeError: integer_validator() missing 1 required positional argument: 'value'
