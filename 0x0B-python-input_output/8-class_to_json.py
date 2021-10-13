@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
 Task 8
+Return a dictionary description with sample data structure
 """
 
 
