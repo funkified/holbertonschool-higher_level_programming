@@ -94,3 +94,17 @@ class Rectangle(Base):
         print('\n' * self.__y, end="")
         print((' ' * self.__x +
               ('#' * self.__width) + '\n') * self.height, end='')
+
+    def update(self, *args):
+        """update args"""
+        count = len(args)
+        if count > 0:
+            self.id = args[0]
+            if count > 1:
+                self.width = args[1]
+                if count > 2:
+                    self.height = args[2]
+                    if count > 3:
+                        self.x = args[3]
+                        if count > 4:
+                            self.y = args[4]
