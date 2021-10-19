@@ -79,10 +79,12 @@ class Rectangle(Base):
 
     def display(self):
         """ display rectanglewith '#' char """
-        print('\n' * self.__y, end="")
-        print((' ' * self.__x + ('#' * self.__width) + '\n') * self.height, end='')
+        for i in range(self.height):
+            print('#' * self.__width)
 
     def __str__(self):
-        """ overriding str method"""
+        """
+        func to override return a  str
+        """
         return ("[Rectangle] ({}) {}/{} - {}/{}".format(
-                self.id, self.__x, self.__y, self.__width, self.__height))
+            self.id, self.__x, self.__y, self.__width, self.__height))
