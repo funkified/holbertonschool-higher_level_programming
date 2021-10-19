@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 """Task 1"""
 
+
 from models.base import Base
+
 
 class Rectangle(Base):
     """Rectangle Class"""
@@ -12,9 +14,9 @@ class Rectangle(Base):
         self.y = y
         super().__init__(id)
 
-    def  __str__(self):
+    def __str__(self):
         return ("[Rectangle] ({}) {}/{} - {}/{}".format(
-            self.id, self.__x, self.__y, self.__width, self.__height))
+                self.id, self.__x, self.__y, self.__width, self.__height))
 
     @property
     def width(self):
@@ -23,7 +25,8 @@ class Rectangle(Base):
 
     @property
     def height(self):
-       return self.__height
+        """ height"""
+        return self.__height
 
     @property
     def x(self):
