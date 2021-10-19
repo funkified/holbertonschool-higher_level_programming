@@ -95,7 +95,7 @@ class Rectangle(Base):
         print((' ' * self.__x +
               ('#' * self.__width) + '\n') * self.height, end='')
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """update args"""
         count = len(args)
         if count > 0:
@@ -108,3 +108,14 @@ class Rectangle(Base):
                         self.x = args[3]
                         if count > 4:
                             self.y = args[4]
+        elif kwargs is not None:
+            if "id" in kwargs:
+                self.id = kwargs['id']
+            if 'width' in kwargs:
+                self.width = kwargs['width']
+            if 'height' in kwargs:
+                self.height = kwargs['height']
+            if 'x' in kwargs:
+                self.x = kwargs['x']
+            if 'y' in kwargs:
+                self.y = kwargs['y']
