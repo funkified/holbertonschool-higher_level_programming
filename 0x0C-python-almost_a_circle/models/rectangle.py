@@ -92,5 +92,5 @@ class Rectangle(Base):
     def display(self):
         """ display rectanglewith '#' char """
         print('\n' * self.__y, end="")
-        print((' ' * self.__x + ('#' * self.__width) + '\n') * self.height, end='')
-
+        print((' ' * self.__x +
+              ('#' * self.__width) + '\n') * self.height, end='')
