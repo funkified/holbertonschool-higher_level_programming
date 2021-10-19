@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Task 1"""
+"""
+Rectangle
+"""
 
 
 from models.base import Base
@@ -37,63 +39,21 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
-        """set width"""
-        if type(value) is not int:
-            raise TypeError("width must be an intger")
-        if value < 0:
-            raise ValueError("width must be >= 0")
+        """width setter"""
         self.__width = value
 
     @height.setter
     def height(self, value):
-        """ sets the height"""
-        if type(value) is not int:
-            raise TypeError("height must be an integer")
-        if value < 0:
-            raise ValueError("height must be >= 0")
+        """height self"""
         self.__height = value
 
     @x.setter
     def x(self, value):
-        """ set x"""
-        if type(value) is not int:
-            raise TypeError("x must be an integer")
-        if value < 0:
-            raise ValueError("x must be >= 0")
+        """ x setter"""
         self.__x = value
 
     @y.setter
     def y(self, value):
-        if type(value) is not int:
-            raise TypeError("y must be an integer")
-        if value < 0:
-            raise ValueError("y must be >= 0")
+        """ y setter"""
         self.__y = value
 
-    def area(self):
-        """area"""
-        return self.__height * self.__width
-
-    def display(self):
-        """ display """
-        print('\n' * self.y, end="")
-        print((" " * self.x + ('#' * self.width) + '\n') * self.height, end="")
-
-    def update(self, *args):
-        """update args"""
-        count = len(args)
-        if count > 0:
-            self.id = args[0]
-            if count > 1:
-                self.width = args[1]
-                if count > 2:
-                    self.height = args[2]
-                    if count > 3:
-                        self.x = args[3]
-                        if count > 4:
-                            self.y = args[4]
-
-    def __str__(self):
-        """ str"""
-        return ("[Rectangle] ({}) {}/{} - {}/{}".format(
-                self.id, self.__x, self.__y, self.__width, self.__height))
