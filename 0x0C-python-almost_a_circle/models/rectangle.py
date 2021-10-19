@@ -14,10 +14,6 @@ class Rectangle(Base):
         self.y = y
         super().__init__(id)
 
-    def __str__(self):
-        return ("[Rectangle] ({}) {}/{} - {}/{}".format(
-                self.id, self.__x, self.__y, self.__width, self.__height))
-
     @property
     def width(self):
         """width property"""
@@ -95,3 +91,8 @@ class Rectangle(Base):
                         self.x = args[3]
                         if count > 4:
                             self.y = args[4]
+
+    def __str__(self):
+        """ str"""
+        return ("[Rectangle] ({}) {}/{} - {}/{}".format(
+                self.id, self.__x, self.__y, self.__width, self.__height))
