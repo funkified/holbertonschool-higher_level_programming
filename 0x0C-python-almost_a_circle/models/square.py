@@ -32,7 +32,7 @@ class Square(Rectangle):
     def __str__(self):
         """string representation"""
         return ("[{}] ({:d}) {:d}/{:d} - {:d}".format(
-            self.__class__.name,
+            self.__class__.__name__,
             self.id, self.x, self.y, self.width))
 
     def uptade(self, *args, **kwargs):
