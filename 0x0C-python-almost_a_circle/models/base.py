@@ -51,9 +51,9 @@ class Base:
         """ returns an instance wit all atribbutes
         already set
         """
-        if cls.__name__ is "Rectangle":
+        if cls.__name__ == "Rectangle":
             dummy = cls(1, 1)
-        elif cls.__name__ is "Square":
+        if cls.__name__ == "Square":
             dummy = cls(1)
         dummy.update(**dictionary)
         return dummy
