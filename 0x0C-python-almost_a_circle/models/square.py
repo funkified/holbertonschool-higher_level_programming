@@ -55,3 +55,15 @@ class Square(Rectangle):
                 self.x = kwargs["x"]
             if "y" in kwargs:
                 self.y = kwargs["y"]
+
+   def to_dictionary(self):
+        """
+        Dictionary representation
+        """
+        dict_rep = {}
+        dict_rep["id"] = self.id
+        dict_rep["size"] = self.size
+        dict_rep["x"] = self.x
+        dict_rep["y"] = self.y
+        return dict_rep
+
