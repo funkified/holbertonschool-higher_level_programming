@@ -23,6 +23,6 @@ class Base:
         """
         return json string representation of list_dictionaries
         """
-        if list_dictionaries is None or len(list_dictionaries) == 0:
-            return []
+        if list_dictionaries is None:
+            return "[]"
         return json.dumps(list_dictionaries)
