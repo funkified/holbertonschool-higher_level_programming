@@ -33,11 +33,11 @@ class Square(Rectangle):
         """string representation"""
         return ("[{}] ({:d}) {:d}/{:d} - {:d}".format(
             self.__class__.__name__,
-            self.id, self.x, self.y, self.width))
+            self.id, self.x, self.y, self.size))
 
     def uptade(self, *args, **kwargs):
         """ updating class"""
-        if args:
+        if len(args):
             for i, j in enumerate(args):
                 if i == 0:
                     self.id = j
