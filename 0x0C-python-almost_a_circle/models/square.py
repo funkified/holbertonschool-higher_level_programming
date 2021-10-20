@@ -36,22 +36,22 @@ class Square(Rectangle):
 
     def uptade(self, *args, **kwargs):
         """ updating class"""
-        len_args = len(args)
-        if len_args > 0:
-            self.id = args[0]
-            if len_args > 1:
-                self.size = args[1]
-                if len_args > 2:
-                    self.x = args[2]
-                    if len_args > 3:
-                        self.y = args[3]
-        elif kwargs is not None:
-            if 'id' in kwargs:
-                self.id = kwargs['id']
-            if 'size' in kwargs:
-                self.size = kwargs['size']
-            if 'x' in kwargs:
+        if len(args):
+            for i, j in enumerate(args):
+                if i == 0:
+                    self.id = j
+                elif i == 1:
+                    self.size = j
+                elif i == 2:
+                    self.x = j
+                elif i == 3:
+                    self.y = j
+        else:
+            if "id" in kwargs:
+                self.id = kwargs["id"]
+            if "size" in kwargs:
+                self.size = kwargs["size"]
+            if "x" in kwargs:
                 self.x = kwargs["x"]
-            if 'y' in kwargs:
-                self.y = kwargs['y']
-
+            if "y" in kwargs:
+                self.y = kwargs["y"]
