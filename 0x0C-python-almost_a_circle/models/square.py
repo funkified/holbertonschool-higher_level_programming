@@ -37,7 +37,7 @@ class Square(Rectangle):
 
     def uptade(self, *args, **kwargs):
         """ updating class"""
-        if len(args):
+        if args:
             for i, j in enumerate(args):
                 if i == 0:
                     self.id = j
