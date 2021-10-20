@@ -33,3 +33,25 @@ class Square(Rectangle):
         """string representation"""
         return ("[Square] ({:d}) {:d}/{:d} - {:d}".format(
             self.id, self.x, self.y, self.width))
+
+    def uptade(self, *args, **kwargs):
+        """ updating class"""
+        len_args = len(args)
+        if len_args > 0:
+            self.id = args[0]
+            if len_args > 1:
+                self.size = args[1]
+                if len_args > 2:
+                    self.x = args[2]
+                    if len_args > 3:
+                        self.y = args[3]
+        elif kwargs is not None:
+            if 'id' in kwargs:
+                self.id = kwargs['id']
+            if 'size' in kwargs:
+                self.size = kwargs['size']
+            if 'x' in kwargs:
+                self.x = kwargs["x"]
+            if 'y' in kwargs:
+                self.y = kwargs['y']
+
