@@ -34,14 +34,41 @@ class Square(Rectangle):
         return ("[Square] ({:d}) {:d}/{:d} - {:d}".format(
             self.id, self.x, self.y, self.width))
 
+    def uptade(self, *args, **kwargs):
+        """ updating class"""
+        if len(args):
+            for i, j in enumerate(args):
+                if i == 0:
+                    self.id = j
+                elif i == 1:
+                    self.size = j
+                elif i == 2:
+                    self.x = j
+                elif i == 3:
+                    self.y = j
+        else:
+            if "id" in kwargs:
+                self.id = kwargs["id"]
+            if "size" in kwargs:
+                self.size = kwargs["size"]
+            if "x" in kwargs:
+                self.x = kwargs["x"]
+            if "y" in kwargs:
+                self.y = kwargs["y"]
+
    def to_dictionary(self):
         """
-        Dictionary representation
-        """
+        Dictionary representation::
         dict_rep = {}
         dict_rep["id"] = self.id
         dict_rep["size"] = self.size
         dict_rep["x"] = self.x
         dict_rep["y"] = self.y
-        return dict_rep
+        """
+        return {
+            "id": self.id,
+            "size": self.size
+            "x": self.x
+            "y":self.y
+        }
 
