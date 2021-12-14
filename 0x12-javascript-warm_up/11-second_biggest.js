@@ -1,8 +1,8 @@
 #!/usr/bin/node
 let secBig = 0;
-const num = process.argv.slice(2);
-if (num.length > 1) {
-  num.sort();
-  secBig = num[num.length - 2];
+const numList = process.argv.slice(2);
+if (numList.length > 1) {
+  numList.sort();
+  secBig = numList[numList.length - 2];
 }
 console.log(secBig);
