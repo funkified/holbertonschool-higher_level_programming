@@ -7,14 +7,15 @@ module.exports = class Rectangle {
       this.height = h;
     }
   }
+
   print () {
-  let str = '';
+    let str = '';
     for (let row = 1; row <= this.height; row++) {
       for (let col = 1; col <= this.width; col++) {
         str += 'X';
       }
       if (row < this.height) {
-	str += '\n';
+        str += '\n';
       }
     }
     console.log(str);
