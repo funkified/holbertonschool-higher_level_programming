@@ -10,7 +10,7 @@ engine = create_engine('mysql+mysqldb://{}:{}@{}/{}'.format(
     argv[1], argv[2], 'localhost', argv[3]))
 # Base.metadata.create_all(engine)
 Session = sessionmaker(bind=engine)
-# Session.configure(bind=engine)
+Session.configure(bind=engine)
 session = Session()
 
 session_query = session.query(State).order_by(State.id)
