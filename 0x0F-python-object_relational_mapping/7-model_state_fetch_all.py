@@ -2,11 +2,11 @@
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from model_base import Base
+from model_state import Base, State
 import sqlalchemy
 
 
-engine = create_engine('mysql+mysqldb://root:root@localhost/hbtn_0e_4_usa', pool_pre_ping=True)
+engine = create_engine('mysql://root:root@localhost/hbtn_0e_6_usa')
 Base.metadata.create_all(engine)
 Session = sessionmaker()
 Session.configure(bind=engine)
