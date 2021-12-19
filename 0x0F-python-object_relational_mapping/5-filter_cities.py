@@ -14,11 +14,10 @@ if __name__ == '__main__':
                            passwd=argv[2],
                            db=argv[3])
     cursor = conn.cursor()
-    cursor.execute("SELECT cities.name FROM cities \
-    JOIN states ON cities.state_id = states.id WHERE states.name=%s \
-    ORDER BY cities.id ASC", (argv[4],))
+    cursor.execute("SELECT * FROM states.name\
+                    ORDER BY cities.id ASC")
     rows = cursor.fetchall()
     for states in rows:
-        print(states)
+        print("{}".format(states))
     cursor.close()
     conn.close()
