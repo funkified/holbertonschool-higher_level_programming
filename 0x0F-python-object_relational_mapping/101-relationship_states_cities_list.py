@@ -2,7 +2,8 @@
 """
 Connecting script with my database
 """
-from model_state import State, Base
+from relationship_state import State, Base
+from relationship_city import City
 from sys import argv
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -20,7 +21,6 @@ if __name__ == '__main__':
 
     for state in query:
         print("{}: {}".format(state.id, state.name))
-        for city in query:
-            print("    {}: {}".format(city.id, city.name))
-    session.commit()
+        for city in state.cities:
+            print("\t{}: {}".format(city.id, city.name))
     session.close()
