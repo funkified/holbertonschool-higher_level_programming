@@ -23,4 +23,3 @@ if __name__ == '__main__':
 
     for state, city in query.all():
         print("{}: ({}) {}".format(state.name, city.id, city.name))
-    session.close()
