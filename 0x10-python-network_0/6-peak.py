@@ -17,7 +17,7 @@ def find_peak(list_of_integers):
             hi = mid - 1
             return list_of_integers[hi]
         else:
-            lo = mid + 1
+            lo = mid - 1
         return list_of_integers[-1]
 
     for idx in range(0, len(list_of_integers) - 1):
