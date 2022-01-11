@@ -13,7 +13,7 @@ def find_peak(list_of_integers):
         mid = lenght // 2
         if mid == hi:
             return list_of_integers[mid]
-        elif mid - 1 > mid:
+        if mid - 1 > mid:
             hi = mid - 1
             return list_of_integers[hi]
         else:
