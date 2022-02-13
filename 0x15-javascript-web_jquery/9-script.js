@@ -1,5 +1,3 @@
-$.get('https://swapi-api.hbtn.io/api/films/?format=json', function (films) {
-  for (const film of films.results) {
-    $('UL#list_movies').append('<li>' + film.title + '</li>');
-  }
+$.get('https://fourtonfish.com/hellosalut/?lang=fr', function (data) {
+  $('DIV#hello').text(data.hello);
 });
